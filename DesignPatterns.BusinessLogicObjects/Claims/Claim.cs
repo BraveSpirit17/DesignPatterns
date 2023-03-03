@@ -1,4 +1,4 @@
-﻿namespace Strategy;
+﻿namespace BusinessLogicObjects.Claims;
 
 public class Claim
 {

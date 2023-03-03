@@ -4,6 +4,11 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>Strategy</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DesignPatterns.BusinessLogicObjects\DesignPatterns.BusinessLogicObjects.csproj" />
+    </ItemGroup>
 
 </Project>

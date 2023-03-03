@@ -1,4 +1,6 @@
-﻿namespace Strategy;
+﻿using BusinessLogicObjects.Claims;
+
+namespace Strategy.Claims;
 
 public class ClaimContext
 {
