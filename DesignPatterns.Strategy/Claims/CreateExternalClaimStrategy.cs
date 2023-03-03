@@ -1,14 +1,16 @@
-﻿namespace Strategy;
+﻿using BusinessLogicObjects.Claims;
 
-public class CreateClaimForFormFeedbackStrategy : IClaimStrategy
+namespace Strategy.Claims;
+
+public class CreateExternalClaimStrategy : IClaimStrategy
 {
     public Claim CreateApplication(string systemKey)
     {
         return new Claim
         {
             Token = systemKey,
-            StateType = 17,
-            ClaimTracker = 2,
+            StateType = 11,
+            ClaimTracker = 19,
             TechnicalSupportLine = 11
         };
     }
