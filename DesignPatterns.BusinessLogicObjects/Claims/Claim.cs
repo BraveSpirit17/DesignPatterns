@@ -1,4 +1,4 @@
-﻿namespace BusinessLogicObjects.Claims;
+﻿namespace DesignPatterns.BusinessLogicObjects.Claims;
 
 public class Claim
 {

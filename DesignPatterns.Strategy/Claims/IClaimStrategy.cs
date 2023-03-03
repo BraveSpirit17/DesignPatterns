@@ -1,6 +1,4 @@
-﻿using BusinessLogicObjects.Claims;
-
-namespace Strategy.Claims;
+﻿namespace DesignPatterns.BusinessLogicObjects.Claims;
 
 public interface IClaimStrategy
 {
