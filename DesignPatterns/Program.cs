@@ -1,7 +1,8 @@
-﻿using DesignPatterns.BusinessLogicObjects.Figures;
-using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿using DesignPatterns.BusinessLogicObjects.Comparers;
+using DesignPatterns.BusinessLogicObjects.Figures;
 using DesignPatterns.BusinessLogicObjects.Payments;
 using DesignPatterns.Factory;
+using System.Drawing;
 
 new Client().Main();
 
@@ -21,18 +22,27 @@ foreach (var payment in payments)
 
 Console.WriteLine();
 
-List<IShape> shapes = new()
+List<Shape> shapes = new()
 {
-    new Circle(3.6),
-    new Rectangle(5, 3),
-    new Triangle(3, 4, 6),
-    new Squar(7)
+    new Circle(5) { Color = Color.AliceBlue },
+    new DesignPatterns.BusinessLogicObjects.Figures.Rectangle(4, 6) { Color = Color.Beige },
+    new Triangle(3, 4, 5) { Color = Color.CadetBlue },
+    new Square(4) { Color = Color.Gainsboro },
+    new Circle(2) { Color = Color.Wheat },
+    new Ellipse(10, 2) { Color = Color.LightYellow },
+    new Circle(3) { Color = Color.AliceBlue },
+    new Square(5) { Color = Color.AliceBlue }
 };
 
-foreach (var shape in shapes)
-{
-    Console.WriteLine(ShapeCalculator.PrintShapeInfo(shape));
-    Console.WriteLine("---");
-}
+shapes.ForEach(Console.WriteLine);
+
+shapes.Sort();
+
+Console.WriteLine("\n=== Sorted by color ===");
+shapes.ForEach(Console.WriteLine);
+
+shapes.Sort(new ShapeAreaComparer());
+shapes.Sort(new ShapePerimeterComparer());
+shapes.Sort(new ShapeColorComparer());
 
 Console.ReadKey();

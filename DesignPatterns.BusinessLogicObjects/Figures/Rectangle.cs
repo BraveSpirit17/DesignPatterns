@@ -1,10 +1,8 @@
-﻿using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
 
-namespace DesignPatterns.BusinessLogicObjects.Figures;
-
-public class Rectangle : IShape
+public class Rectangle : Shape
 {
-    public string Name => "Rectangle";
+    public override string Name => "Rectangle";
 
     public double Width { get; }
     public double Height { get; }
@@ -17,6 +15,6 @@ public class Rectangle : IShape
         (Width, Height) = (width, height);
     }
 
-    public double GetArea() => Width * Height;
-    public double GetPerimeter() => 2 * (Width + Height);
+    public override double GetArea() => Width * Height;
+    public override double GetPerimeter() => 2 * (Width + Height);
 }

@@ -1,12 +1,10 @@
-﻿using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
 
-namespace DesignPatterns.BusinessLogicObjects.Figures;
-
-public class Squar : IShape
+public class Square : Shape
 {
     private int _a;
 
-    public string Name => "Squar";
+    public override string Name => "Squar";
 
     public int A
     {
@@ -21,11 +19,11 @@ public class Squar : IShape
         }
     }
 
-    public Squar(int a)
+    public Square(int a)
     {
         A = a;
     }
 
-    public double GetArea() => Math.Pow(A, 2);
-    public double GetPerimeter() => 4 * A;
+    public override double GetArea() => Math.Pow(A, 2);
+    public override double GetPerimeter() => 4 * A;
 }

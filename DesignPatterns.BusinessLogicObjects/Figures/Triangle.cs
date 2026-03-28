@@ -1,10 +1,8 @@
-﻿using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
 
-namespace DesignPatterns.BusinessLogicObjects.Figures;
-
-public class Triangle : IShape
+public class Triangle : Shape
 {
-    public string Name => "Triangle";
+    public override string Name => "Triangle";
 
     public int A {  get; set; }
 
@@ -23,12 +21,12 @@ public class Triangle : IShape
         (A, B, C) = (a, b, c);
     }
 
-    public double GetArea()
+    public override double GetArea()
     {
         var p = GetPerimeter() / 2;
 
         return Math.Sqrt(p * (p - A) * (p - B) * (p - C));
     }
 
-    public double GetPerimeter() => A + B + C;
+    public override double GetPerimeter() => A + B + C;
 }

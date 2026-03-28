@@ -1,12 +1,10 @@
-﻿using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
 
-namespace DesignPatterns.BusinessLogicObjects.Figures;
-
-public class Circle : IShape
+public class Circle : Shape
 {
     private double _radius;
 
-    public string Name => "Circle";
+    public override string Name => "Circle";
 
     public double Radius
     {
@@ -26,13 +24,6 @@ public class Circle : IShape
         Radius = radius;
     }
 
-    public double GetArea()
-    {
-        return Math.PI * Math.Pow(Radius, 2);
-    }
-
-    public double GetPerimeter()
-    {
-        return 2 * Math.PI * Radius;
-    }
+    public override double GetArea() => Math.PI * Math.Pow(Radius, 2);
+    public override double GetPerimeter() => 2 * Math.PI * Radius;
 }

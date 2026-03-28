@@ -1,10 +1,8 @@
-﻿using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
 
-namespace DesignPatterns.BusinessLogicObjects.Figures;
-
-public class Parallelogram : IShape
+public class Parallelogram : Shape
 {
-    public string Name => "Parallelogram";
+    public override string Name => "Parallelogram";
 
     public double A { get; set; }
 
@@ -20,6 +18,6 @@ public class Parallelogram : IShape
         (A, B, H) = (a, b, h);
     }
 
-    public double GetArea() => A * H;
-    public double GetPerimeter() => 2 * (A + B);
+    public override double GetArea() => A * H;
+    public override double GetPerimeter() => 2 * (A + B);
 }

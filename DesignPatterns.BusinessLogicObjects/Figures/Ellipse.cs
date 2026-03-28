@@ -1,10 +1,8 @@
-﻿using DesignPatterns.BusinessLogicObjects.Interfaces;
+﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
 
-namespace DesignPatterns.BusinessLogicObjects.Figures;
-
-public class Ellipse : IShape
+public class Ellipse : Shape
 {
-    public string Name => "Ellipse";
+    public override string Name => "Ellipse";
 
     public double A { get; set; }
 
@@ -18,6 +16,6 @@ public class Ellipse : IShape
         (A, B) = (a, b);
     }
 
-    public double GetArea() => Math.PI * A * B;
-    public double GetPerimeter() => Math.PI * (3 * (A + B) - Math.Sqrt((3 * A + B) * (A + 3 * B)));
+    public override double GetArea() => Math.PI * A * B;
+    public override double GetPerimeter() => Math.PI * (3 * (A + B) - Math.Sqrt((3 * A + B) * (A + 3 * B)));
 }
