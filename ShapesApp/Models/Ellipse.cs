@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
+﻿namespace ShapesApp.Models;
 
 public class Ellipse : Shape
 {

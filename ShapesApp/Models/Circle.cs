@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.BusinessLogicObjects.Figures;
+﻿namespace ShapesApp.Models;
 
 public class Circle : Shape
 {
@@ -17,6 +17,11 @@ public class Circle : Shape
             }
             _radius = value;
         }
+    }
+
+    public override object Clone()
+    {
+        return base.Clone();
     }
 
     public Circle(double radius)
