@@ -1,6 +1,11 @@
-﻿using ShapesApp.Comparers;
+﻿using ShapesApp;
+using ShapesApp.Comparers;
 using ShapesApp.Models;
 using System.Drawing;
+
+var writer = new ShapeFileWriter("shapes.txt");
+writer.Write(new Circle(5) { Color = Color.Red });
+writer.Write(new ShapesApp.Models.Rectangle(3, 4) { Color = Color.Blue });
 
 List<Shape> shapes = new()
 {
